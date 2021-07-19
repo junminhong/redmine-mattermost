@@ -1,0 +1,35 @@
+<p>
+	<label for="settings_icon">Mattermost Icon</label>
+	<input type="text" id="settings_icon" value="<%= settings['icon'] %>" name="settings[icon]" />
+</p>
+
+<p>
+	<label for="settings_mattermosturl">Mattermost url</label>
+	<input type="text" id="settings_mattermosturl" value="<%= settings['mattermost_url'] %>" name="settings[mattermost_url]" />
+</p>
+
+<p>
+	<label for="settings_username">Mattermost Account</label>
+	<input type="text" id="settings_username" value="<%= settings['account'] %>" name="settings[account]" />
+</p>
+
+<p>
+	<label for="settings_userpassword">Mattermost Password</label>
+	<input type="password" id="settings_userpassword" value="<%= settings['password'] %>" name="settings[password]" />
+</p>
+
+<p>
+	<label for="settings_display_watchers">Display Watchers?</label>
+	<!--
+	<select id="settings_display_watchers" value="<%= settings['display_watchers'] %>" name="settings[display_watchers]">
+		<option value="yes">Yes</option>
+		<option value="no" <%= settings['display_watchers'] != 'yes' ? %q(selected="selected") : '' %>>No</option>
+	</select>
+	-->
+	<input type="checkbox" id="settings_display_watchers" value="1" name="settings[display_watchers]" <%= settings['display_watchers'] == '1' ? 'checked="checked"' : '' %> />
+</p>
+
+<p>
+	<label for="settings_post_updates">Post Issue Updates?</label>
+	<input type="checkbox" id="settings_post_updates" value="1" name="settings[post_updates]" <%= settings['post_updates'] == '1' ? 'checked="checked"' : '' %> />
+</p>

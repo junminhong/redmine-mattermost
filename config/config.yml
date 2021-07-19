@@ -1,0 +1,14 @@
+mattermost:
+  api:
+    users_login: "api/v4/users/login"
+    users_email: "api/v4/users/email"
+    channel_direct: "api/v4/channels/direct"
+    posts: "api/v4/posts"
+redmine:
+  api:
+    users: "users.json"
+    get_user: "users"
+  key: ""
+  url: ""
+
+create_issue_msg: ""
